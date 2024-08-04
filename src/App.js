@@ -1,23 +1,78 @@
-import logo from './logo.svg';
 import './App.css';
+import { useState } from 'react';
+import AboutPage from './pages/AboutPage.js';
+import ProjectPage from './pages/ProjectPage.js';
+import ExperiencePage from './pages/ExperiencePage.js';
+import AdventurePage from './pages/AdventurePage.js';
 
 function App() {
+  const [page, setPage] = useState(0);
+
+
+  // Page enum
+  const Pages = Object.freeze({
+    ABOUT: 0,
+    PROJECTS: 1,
+    EXPERIENCE: 2,
+    ADVENTURES: 3
+  });
+  
+  // Change page
+  let mainContent = <AboutPage />;
+  switch (page) {
+    case Pages.ABOUT:
+      mainContent = <AboutPage />;
+      break;
+    case Pages.PROJECTS:
+      mainContent = <ProjectPage />;
+      break;
+    case Pages.EXPERIENCE:
+      mainContent = <ExperiencePage />;
+      break;
+    case Pages.ADVENTURES:
+      mainContent = <AdventurePage />;
+      break;
+    default:
+      mainContent = <AboutPage />;
+  }
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <nav className='w-full h-16 absolute top-0'>
+        <div className='inline-flex bg-green-500 border rounded-b-lg flex'>
+          <div className='p-3 cursor-pointer hover:bg-green-200 rounded-bl-lg'
+            onClick={() => setPage(Pages.ABOUT)}>
+            About Me
+          </div>
+          <div className='p-3 cursor-pointer hover:bg-green-200'
+            onClick={() => setPage(Pages.PROJECTS)}>
+            Projects
+          </div>
+          <div className='p-3 cursor-pointer hover:bg-green-200'
+            onClick={() => setPage(Pages.EXPERIENCE)}>
+            Experience
+          </div>
+          <div className='p-3 cursor-pointer hover:bg-green-200 rounded-br-lg'
+            onClick={() => setPage(Pages.ADVENTURES)}>
+            Adventures
+          </div>
+        </div>
+      </nav>
+
+      <main className='App-main'>
+        {mainContent}
+      </main>
+
+      <footer className='flex p-2 text-white items-center justify-center'>
+        <div className='select-none'>
+          Contact me at: 
+        </div>
+        <div className='px-3'>
+          pramza427@gmail.com
+        </div>
+        
+      </footer>
+
     </div>
   );
 }
