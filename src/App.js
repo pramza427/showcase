@@ -38,8 +38,8 @@ function App() {
 
   return (
     <div className="App">
-      <nav className='w-full h-16 absolute top-0'>
-        <div className='inline-flex bg-green-500 border rounded-b-lg flex'>
+      <nav className='w-full h-auto text-sm'>
+        <div className='flex md:inline-flex justify-center bg-green-500 md:border md:rounded-b-lg'>
           <div className='p-3 cursor-pointer hover:bg-green-200 rounded-bl-lg'
             onClick={() => setPage(Pages.ABOUT)}>
             About Me

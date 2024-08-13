@@ -1,7 +1,5 @@
 .App {
   background-color: #282c34;
-  text-align: center;
-  
 }
 
 .App-logo {
@@ -21,7 +19,6 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
   color: white;
 }
 
@@ -36,4 +33,51 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.carouselContainer {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+.carousel {
+  transform-style: preserve-3d;
+  position: relative;
+  width: 100%;
+  height: 500px;
+  perspective: 1000px;
+  overflow: hidden;
+}
+
+.location {
+  transform-origin: center center -900px;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  transition: all 2s ease-in-out;
+  
+}
+
+.hiddenLoc {
+  display: none;
+}
+
+.ariving{
+  transform: rotateY(0deg) ;
+  opacity: 1;
+}
+
+.departing.left{
+  transform: rotateY(80deg) translateX(500px) ;
+  opacity: 0
+}
+
+.departing.right{
+  transform: rotateY(-80deg) translateX(-500px) ;
+  opacity: 0
 }
