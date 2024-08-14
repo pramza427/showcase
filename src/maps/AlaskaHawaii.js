@@ -1,7 +1,7 @@
 import { stateInfo } from "../data/state_info";
 import React, { useEffect, useRef } from 'react';
 
-function AlaskaHawaii() {
+function AlaskaHawaii(clickFunc) {
 
     const AHRef = useRef(null);
 
@@ -12,19 +12,18 @@ function AlaskaHawaii() {
             // Get all paths from the SVG
             const paths = svgNode.querySelectorAll("path");
 
-            // Change fill color for visited states
             paths.forEach((path) => {
                 const stateId = path.id;
                 path.addEventListener("click", () => {
-                    console.log(stateId);
+                  clickFunc(stateId);
                 });
-                console.log(stateId)
+                // Change fill color for visited states
                 if (stateInfo[stateId].visited) {
                     path.setAttribute("fill", "green");
                 }
             });
         }
-    }, [stateInfo]);
+    });
 
 
     return (
