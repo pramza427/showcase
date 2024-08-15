@@ -37,7 +37,7 @@ function App() {
   }
 
   return (
-    <div className="App">
+    <div className="App text-sm md:text-xl">
       <nav className='w-full h-auto text-sm'>
         <div className='flex md:inline-flex justify-center bg-green-500 md:border md:rounded-b-lg'>
           <div className='p-3 cursor-pointer hover:bg-green-200 rounded-bl-lg'
@@ -63,7 +63,7 @@ function App() {
         {mainContent}
       </main>
 
-      <footer className='flex p-2 text-white items-center justify-center'>
+      <footer className='flex p-2 text-white items-center justify-center bg-gray-900 border-t border-gray-800'>
         <div className='select-none'>
           Contact me at: 
         </div>

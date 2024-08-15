@@ -2,251 +2,551 @@ export const stateInfo = {
     "Alabama": {
         visited: false,
         favoriteLoc: [],
-        activities: [0, 0, 0, 0, 0]
+        hiking: 0,
+        backpacking: 0,
+        camping: 0,
+        biking: 0,
+        snowboarding: 0,
+        climbing: 0,
+        pictures: []
     },
     "Alaska": {
         visited: true,
         favoriteLoc: ["Anchorage", "Juneu", "Fairbanks", "Denali National Park"],
-        activities: [0, 0, 0, 0, 0]
+        hiking: 3,
+        backpacking: 0,
+        camping: 0,
+        biking: 3,
+        snowboarding: 0,
+        climbing: 0,
+        pictures: []
     },
     "Arizona": {
         visited: true,
-        favoriteLoc: [],
-        activities: [0, 0, 0, 0, 0]
+        favoriteLoc: ["Las Vegas", "Grand Canyon National Park", "Petrified Forest National Park"],
+        hiking: 3,
+        backpacking: 0,
+        camping: 0,
+        biking: 0,
+        snowboarding: 0,
+        climbing: 0,
+        pictures: []
     },
     "Arkansas": {
         visited: true,
-        favoriteLoc: [],
-        activities: [0, 0, 0, 0, 0]
+        favoriteLoc: ["Eagle Rock Loop"],
+        hiking: 3,
+        backpacking: 3,
+        camping: 0,
+        biking: 0,
+        snowboarding: 0,
+        climbing: 0,
+        pictures: []
     },
     "California": {
         visited: true,
-        favoriteLoc: [],
-        activities: [0, 0, 0, 0, 0]
+        favoriteLoc: ["Yosemite National Park", "Sequoia National Park", "Redwood National Park"],
+        hiking: 3,
+        backpacking: 0,
+        camping: 0,
+        biking: 0,
+        snowboarding: 0,
+        climbing: 0,
+        pictures: []
     },
     "Colorado": {
         visited: true,
         favoriteLoc: ["Denver", "Leadville", "Salida", "Alamosa", "Great Sand Dunes National Park", "Vail", "Wolf Creek", "Black Canyon", "Rocky Mountain National Park"],
-        activities: [3, 3, 3, 2, 3]
+        hiking: 3,
+        backpacking: 3,
+        camping: 3,
+        biking: 2,
+        snowboarding: 3,
+        climbing: 3,
+        pictures: []
     },
     "Connecticut": {
         visited: false,
         favoriteLoc: [],
-        activities: [0, 0, 0, 0, 0]
+        hiking: 0,
+        backpacking: 0,
+        camping: 0,
+        biking: 0,
+        snowboarding: 0,
+        climbing: 0,
+        pictures: []
     },
     "Delaware": {
         visited: false,
         favoriteLoc: [],
-        activities: [0, 0, 0, 0, 0]
+        hiking: 0,
+        backpacking: 0,
+        camping: 0,
+        biking: 0,
+        snowboarding: 0,
+        climbing: 0,
+        pictures: []
     },
     "Florida": {
         visited: true,
-        favoriteLoc: [],
-        activities: [0, 0, 0, 0, 0]
+        favoriteLoc: ["Dinsney World"],
+        hiking: 0,
+        backpacking: 0,
+        camping: 0,
+        biking: 0,
+        snowboarding: 0,
+        climbing: 0,
+        pictures: []
     },
     "Georgia": {
         visited: false,
         favoriteLoc: [],
-        activities: [0, 0, 0, 0, 0]
+        hiking: 0,
+        backpacking: 0,
+        camping: 0,
+        biking: 0,
+        snowboarding: 0,
+        climbing: 0,
+        pictures: []
     },
     "Hawaii": {
         visited: false,
         favoriteLoc: [],
-        activities: [0, 0, 0, 0, 0]
+        hiking: 0,
+        backpacking: 0,
+        camping: 0,
+        biking: 0,
+        snowboarding: 0,
+        climbing: 0,
+        pictures: []
     },
     "Idaho": {
         visited: true,
-        favoriteLoc: [],
-        activities: [0, 0, 0, 0, 0]
+        favoriteLoc: ["McCall", "Tamarack Resort" ],
+        hiking: 0,
+        backpacking: 0,
+        camping: 0,
+        biking: 0,
+        snowboarding: 3,
+        climbing: 0,
+        pictures: []
     },
     "Illinois": {
         visited: true,
-        favoriteLoc: [],
-        activities: [0, 0, 0, 0, 0]
+        favoriteLoc: ["Chicago", "University of Illinois - Chicago", "University of Illinois - Springfield", "Garden of the Gods", "Starved Rock"],
+        hiking: 2,
+        backpacking: 0,
+        camping: 2,
+        biking: 3,
+        snowboarding: 0,
+        climbing: 0,
+        pictures: []
     },
     "Indiana": {
         visited: true,
-        favoriteLoc: [],
-        activities: [0, 0, 0, 0, 0]
+        favoriteLoc: ["Indiana Dunes National Park", "Valparaiso University"],
+        hiking: 2,
+        backpacking: 0,
+        camping: 0,
+        biking: 2,
+        snowboarding: 0,
+        climbing: 0,
+        pictures: []
     },
     "Iowa": {
         visited: true,
-        favoriteLoc: [],
-        activities: [0, 0, 0, 0, 0]
+        favoriteLoc: ["Maquoketa Caves State Park"],
+        hiking: 3,
+        backpacking: 0,
+        camping: 3,
+        biking: 0,
+        snowboarding: 0,
+        climbing: 0,
+        pictures: []
     },
     "Kansas": {
         visited: true,
         favoriteLoc: [],
-        activities: [0, 0, 0, 0, 0]
+        hiking: 0,
+        backpacking: 0,
+        camping: 0,
+        biking: 0,
+        snowboarding: 0,
+        climbing: 0,
+        pictures: []
     },
     "Kentucky": {
         visited: true,
-        favoriteLoc: [],
-        activities: [0, 0, 0, 0, 0]
+        favoriteLoc: ["Red River Gorge", "Mammoth Cave"],
+        hiking: 3,
+        backpacking: 0,
+        camping: 3,
+        biking: 0,
+        snowboarding: 0,
+        climbing: 3,
+        pictures: []
     },
     "Louisiana": {
         visited: false,
         favoriteLoc: [],
-        activities: [0, 0, 0, 0, 0]
+        hiking: 0,
+        backpacking: 0,
+        camping: 0,
+        biking: 0,
+        snowboarding: 0,
+        climbing: 0,
+        pictures: []
     },
     "Maine": {
         visited: false,
         favoriteLoc: [],
-        activities: [0, 0, 0, 0, 0]
+        hiking: 0,
+        backpacking: 0,
+        camping: 0,
+        biking: 0,
+        snowboarding: 0,
+        climbing: 0,
+        pictures: []
     },
     "Maryland": {
         visited: false,
         favoriteLoc: [],
-        activities: [0, 0, 0, 0, 0]
+        hiking: 0,
+        backpacking: 0,
+        camping: 0,
+        biking: 0,
+        snowboarding: 0,
+        climbing: 0,
+        pictures: []
     },
     "Massachusetts": {
         visited: false,
         favoriteLoc: [],
-        activities: [0, 0, 0, 0, 0]
+        hiking: 0,
+        backpacking: 0,
+        camping: 0,
+        biking: 0,
+        snowboarding: 0,
+        climbing: 0,
+        pictures: []
     },
     "Michigan": {
         visited: true,
-        favoriteLoc: [],
-        activities: [0, 0, 0, 0, 0]
+        favoriteLoc: ["Ann Arbor", "Detroit", ],
+        hiking: 3,
+        backpacking: 1,
+        camping: 2,
+        biking: 0,
+        snowboarding: 3,
+        climbing: 0,
+        pictures: []
     },
     "Minnesota": {
         visited: false,
         favoriteLoc: [],
-        activities: [0, 0, 0, 0, 0]
+        hiking: 0,
+        backpacking: 0,
+        camping: 0,
+        biking: 0,
+        snowboarding: 0,
+        climbing: 0,
+        pictures: []
     },
     "Mississippi": {
         visited: false,
         favoriteLoc: [],
-        activities: [0, 0, 0, 0, 0]
+        hiking: 0,
+        backpacking: 0,
+        camping: 0,
+        biking: 0,
+        snowboarding: 0,
+        climbing: 0,
+        pictures: []
     },
     "Missouri": {
-        visited: true,
+        visited: false,
         favoriteLoc: [],
-        activities: [0, 0, 0, 0, 0]
+        hiking: 0,
+        backpacking: 0,
+        camping: 0,
+        biking: 0,
+        snowboarding: 0,
+        climbing: 0,
+        pictures: []
     },
     "Montana": {
         visited: false,
         favoriteLoc: [],
-        activities: [0, 0, 0, 0, 0]
+        hiking: 0,
+        backpacking: 0,
+        camping: 0,
+        biking: 0,
+        snowboarding: 0,
+        climbing: 0,
+        pictures: []
     },
     "Nebraska": {
         visited: true,
         favoriteLoc: [],
-        activities: [0, 0, 0, 0, 0]
+        hiking: 0,
+        backpacking: 0,
+        camping: 0,
+        biking: 0,
+        snowboarding: 0,
+        climbing: 0,
+        pictures: []
     },
     "Nevada": {
         visited: true,
-        favoriteLoc: [],
-        activities: [0, 0, 0, 0, 0]
+        favoriteLoc: ["Las Vagas", "Hoover Dam"],
+        hiking: 2,
+        backpacking: 0,
+        camping: 0,
+        biking: 0,
+        snowboarding: 0,
+        climbing: 0,
+        pictures: []
     },
     "New Hampshire": {
         visited: false,
         favoriteLoc: [],
-        activities: [0, 0, 0, 0, 0]
+        hiking: 0,
+        backpacking: 0,
+        camping: 0,
+        biking: 0,
+        snowboarding: 0,
+        climbing: 0,
+        pictures: []
     },
     "New Jersey": {
         visited: false,
         favoriteLoc: [],
-        activities: [0, 0, 0, 0, 0]
+        hiking: 0,
+        backpacking: 0,
+        camping: 0,
+        biking: 0,
+        snowboarding: 0,
+        climbing: 0,
+        pictures: []
     },
     "New Mexico": {
         visited: true,
         favoriteLoc: [],
-        activities: [0, 0, 0, 0, 0]
+        hiking: 0,
+        backpacking: 0,
+        camping: 0,
+        biking: 0,
+        snowboarding: 0,
+        climbing: 3,
+        pictures: []
     },
     "New York": {
         visited: true,
-        favoriteLoc: [],
-        activities: [0, 0, 0, 0, 0]
+        favoriteLoc: ["New York City"],
+        hiking: 3,
+        backpacking: 0,
+        camping: 0,
+        biking: 0,
+        snowboarding: 0,
+        climbing: 0,
+        pictures: []
     },
     "North Carolina": {
-        visited: false,
-        favoriteLoc: [],
-        activities: [0, 0, 0, 0, 0]
+        visited: true,
+        favoriteLoc: ["Great Smoky Mountains"],
+        hiking: 3,
+        backpacking: 0,
+        camping: 0,
+        biking: 0,
+        snowboarding: 0,
+        climbing: 0,
+        pictures: []
     },
     "North Dakota": {
         visited: false,
         favoriteLoc: [],
-        activities: [0, 0, 0, 0, 0]
+        hiking: 0,
+        backpacking: 0,
+        camping: 0,
+        biking: 0,
+        snowboarding: 0,
+        climbing: 0,
+        pictures: []
     },
     "Ohio": {
         visited: true,
-        favoriteLoc: [],
-        activities: [0, 0, 0, 0, 0]
+        favoriteLoc: ["Cincinnati"],
+        hiking: 0,
+        backpacking: 0,
+        camping: 0,
+        biking: 0,
+        snowboarding: 0,
+        climbing: 0,
+        pictures: []
     },
     "Oklahoma": {
         visited: false,
         favoriteLoc: [],
-        activities: [0, 0, 0, 0, 0]
+        hiking: 0,
+        backpacking: 0,
+        camping: 0,
+        biking: 0,
+        snowboarding: 0,
+        climbing: 0,
+        pictures: []
     },
     "Oregon": {
         visited: false,
         favoriteLoc: [],
-        activities: [0, 0, 0, 0, 0]
+        hiking: 0,
+        backpacking: 0,
+        camping: 0,
+        biking: 0,
+        snowboarding: 0,
+        climbing: 0,
+        pictures: []
     },
     "Pennsylvania": {
         visited: false,
         favoriteLoc: [],
-        activities: [0, 0, 0, 0, 0]
+        hiking: 0,
+        backpacking: 0,
+        camping: 0,
+        biking: 0,
+        snowboarding: 0,
+        climbing: 0,
+        pictures: []
     },
     "Rhode Island": {
         visited: false,
         favoriteLoc: [],
-        activities: [0, 0, 0, 0, 0]
+        hiking: 0,
+        backpacking: 0,
+        camping: 0,
+        biking: 0,
+        snowboarding: 0,
+        climbing: 0,
+        pictures: []
     },
     "South Carolina": {
         visited: false,
         favoriteLoc: [],
-        activities: [0, 0, 0, 0, 0]
+        hiking: 0,
+        backpacking: 0,
+        camping: 0,
+        biking: 0,
+        snowboarding: 0,
+        climbing: 0,
+        pictures: []
     },
     "South Dakota": {
         visited: false,
         favoriteLoc: [],
-        activities: [0, 0, 0, 0, 0]
+        hiking: 0,
+        backpacking: 0,
+        camping: 0,
+        biking: 0,
+        snowboarding: 0,
+        climbing: 0,
+        pictures: []
     },
     "Tennessee": {
         visited: true,
-        favoriteLoc: [],
-        activities: [0, 0, 0, 0, 0]
+        favoriteLoc: ["Nashville"],
+        hiking: 0,
+        backpacking: 0,
+        camping: 0,
+        biking: 0,
+        snowboarding: 0,
+        climbing: 0,
+        pictures: []
     },
     "Texas": {
         visited: false,
         favoriteLoc: [],
-        activities: [0, 0, 0, 0, 0]
+        hiking: 0,
+        backpacking: 0,
+        camping: 0,
+        biking: 0,
+        snowboarding: 0,
+        climbing: 0,
+        pictures: []
     },
     "Utah": {
         visited: true,
         favoriteLoc: [],
-        activities: [0, 0, 0, 0, 0]
+        hiking: 0,
+        backpacking: 0,
+        camping: 0,
+        biking: 0,
+        snowboarding: 0,
+        climbing: 0,
+        pictures: []
     },
     "Vermont": {
         visited: false,
         favoriteLoc: [],
-        activities: [0, 0, 0, 0, 0]
+        hiking: 0,
+        backpacking: 0,
+        camping: 0,
+        biking: 0,
+        snowboarding: 0,
+        climbing: 0,
+        pictures: []
     },
     "Virginia": {
         visited: false,
         favoriteLoc: [],
-        activities: [0, 0, 0, 0, 0]
+        hiking: 0,
+        backpacking: 0,
+        camping: 0,
+        biking: 0,
+        snowboarding: 0,
+        climbing: 0,
+        pictures: []
     },
     "Washington": {
         visited: false,
         favoriteLoc: [],
-        activities: [0, 0, 0, 0, 0]
+        hiking: 0,
+        backpacking: 0,
+        camping: 0,
+        biking: 0,
+        snowboarding: 0,
+        climbing: 0,
+        pictures: []
     },
     "West Virginia": {
         visited: false,
         favoriteLoc: [],
-        activities: [0, 0, 0, 0, 0]
+        hiking: 0,
+        backpacking: 0,
+        camping: 0,
+        biking: 0,
+        snowboarding: 0,
+        climbing: 0,
+        pictures: []
     },
     "Wisconsin": {
         visited: true,
-        favoriteLoc: [],
-        activities: [0, 0, 0, 0, 0]
+        favoriteLoc: ["Crivitz", "Wisconsin Dells", "Necedah", "Hillbilly Hollow", "Devils Head Resort", "Alpine Valley Resort"],
+        hiking: 3,
+        backpacking: 1,
+        camping: 3,
+        biking: 0,
+        snowboarding: 3,
+        climbing: 1,
+        pictures: []
     },
     "Wyoming": {
         visited: true,
-        favoriteLoc: [],
-        activities: [0, 0, 0, 0, 0]
+        favoriteLoc: ["Wind River Range", "Grand Tetons", "Ten Sleep Canyon"],
+        hiking: 3,
+        backpacking: 3,
+        camping: 0,
+        biking: 0,
+        snowboarding: 0,
+        climbing: 3,
+        pictures: []
     }
 }

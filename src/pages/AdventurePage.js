@@ -104,51 +104,88 @@ function AdventurePage() {
     }
 
     function PrintDescription() {
-        if(currentState === ""){
-            return(<div/>);
+        if (currentState === "") {
+            return (<div>Click on a state to get more information</div>);
         }
 
         const iconColors = [" text-gray-700 ", " text-red-500 ", " text-yellow-500 ", " text-green-500 "];
 
         const currentStateInfo = stateInfo[currentState];
-        const favoriteSpots = currentStateInfo.favoriteLoc.map((loc, idx) => {
-            return (<li key={idx}>{loc}</li>);
+
+        if (currentStateInfo.visited === false) {
+            return (
+                <div className="flex flex-col text-center">
+                    <div className="text-4xl m-5">{currentState}</div>
+                    <div className="text-lg">I have never visited {currentState}</div>
+                </div>
+            )
+        }
+
+        const favoriteSpots = currentStateInfo.favoriteLoc.sort().map((loc, idx) => {
+            return (<li key={idx} className="p-2 text-lg">{loc}</li>);
+        });
+
+        const favoritePictures = currentStateInfo.pictures.map((pic, idx) => {
+            return (<img key={idx} className="" src={pic} />);
         });
 
         return (
-            <div>
-                <div className="text-3xl">{currentState}</div>
-                <div className="flex justify-center">
-                    <i className={"fas fa-4x fa-walking m-3" + iconColors[currentStateInfo.activities[0]]}></i>
-                    <i className={"fas fa-4x fa-campground m-3" + iconColors[currentStateInfo.activities[1]]}></i>
-                    <i className={"fas fa-4x fa-hiking m-3" + iconColors[currentStateInfo.activities[2]]}></i>
-                    <i className={"fas fa-4x fa-biking m-3" + iconColors[currentStateInfo.activities[3]]}></i>
-                    <i className={"fas fa-4x fa-snowboarding m-3 mt-4" + iconColors[currentStateInfo.activities[4]]}></i>
+            <div className="flex flex-col 2xl:w-1/2 text-center 2xl:h-80vh">
+                <div className="text-4xl m-5">{currentState}</div>
+                <div className="flex flex-col items-center" >
+                    <div className="m-2 border border-gray-900 rounded w-full md:w-1/2">
+                        <div className="p-2 text-2xl border-b border-gray-900 bg-gray-800 rounded-t">
+                            Activities:
+                        </div>
+                        <div className="flex justify-center">
+                            <i className={"fas fa-2x md:fa-4x fa-walking m-3" + iconColors[currentStateInfo.hiking]}></i>
+                            <i className={"fas fa-2x md:fa-4x fa-campground m-3" + iconColors[currentStateInfo.camping]}></i>
+                            <i className={"fas fa-2x md:fa-4x fa-hiking m-3" + iconColors[currentStateInfo.backpacking]}></i>
+                            <i className={"fas fa-2x md:fa-4x fa-biking m-3" + iconColors[currentStateInfo.biking]}></i>
+                            <i className={"fas fa-2x md:fa-4x fa-snowboarding m-3 mt-4" + iconColors[currentStateInfo.snowboarding]}></i>
+                        </div>
+                    </div>
+
+                    <div className="m-2 border border-gray-900 rounded w-full md:w-1/2">
+                        <div className="p-2 text-2xl border-b border-gray-900 bg-gray-800 rounded-t">
+                            Visited locations:
+                        </div>
+                        <ul className="grid md:grid-cols-2">
+                            {favoriteSpots}
+                        </ul>
+                    </div>
+
+                    <div className="m-2 border border-gray-900 rounded w-full md:w-3/4">
+                        <div className="p-2 text-2xl border-b border-gray-900 bg-gray-800 rounded-t">
+                            Favorite Pictures:
+                        </div>
+                        <ul className="grid md:grid-cols-2">
+                            {favoritePictures}
+                        </ul>
+                    </div>
                 </div>
-                <ul>
-                    {favoriteSpots}
-                </ul>
-
-
             </div>
         )
     }
-    return (
-        <div className="w-full text-center">
-            <div className="text-3xl">{locations[currentIndex].name}</div>
-            <div className="carouselContainer">
-                <div className="carousel">
-                    {locations.map((loc, index) => (
-                        <div className={getLocationClass(index)} >
-                            {loc.elem(setCurrentState)}
-                        </div>
-                    ))}
-                </div>
-                <PrintLinks a={locations[currentIndex].links} />
-            </div>
 
+    return (
+        <div className="flex flex-col 2xl:flex-row">
+            <div className="w-full 2xl:w-1/2 text-center">
+                <div className="text-3xl">{locations[currentIndex].name}</div>
+                <div className="carouselContainer">
+                    <div className="carousel">
+                        {locations.map((loc, index) => (
+                            <div className={getLocationClass(index)} >
+                                {loc.elem(setCurrentState)}
+                            </div>
+                        ))}
+                    </div>
+                    <PrintLinks a={locations[currentIndex].links} />
+                </div>
+            </div>
             <PrintDescription />
         </div>
+
 
     );
 

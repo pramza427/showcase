@@ -50,7 +50,7 @@
 }
 
 .location {
-  transform-origin: center center -900px;
+  transform-origin: center center -3000px;
   position: absolute;
   width: 100%;
   height: 100%;
@@ -69,11 +69,11 @@
 }
 
 .departing.left{
-  transform: rotateY(80deg) translateX(500px) ;
+  transform: rotateY(70deg);
   opacity: 0
 }
 
 .departing.right{
-  transform: rotateY(-80deg) translateX(-500px) ;
+  transform: rotateY(-70deg) ;
   opacity: 0
 }
