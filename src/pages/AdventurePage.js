@@ -105,7 +105,7 @@ function AdventurePage() {
 
     function PrintDescription() {
         if (currentState === "") {
-            return (<div>Click on a state to get more information</div>);
+            return (<div className="text-center">Click on a state to get more information</div>);
         }
 
         const iconColors = [" text-gray-700 ", " text-red-500 ", " text-yellow-500 ", " text-green-500 "];
@@ -126,15 +126,15 @@ function AdventurePage() {
         });
 
         const favoritePictures = currentStateInfo.pictures.map((pic, idx) => {
-            return (<img key={idx} className="" src={pic} />);
+            return (<img key={idx} alt="location" className="" src={pic} />);
         });
 
         return (
             <div className="flex flex-col 2xl:w-1/2 text-center 2xl:h-80vh">
                 <div className="text-4xl m-5">{currentState}</div>
                 <div className="flex flex-col items-center" >
-                    <div className="m-2 border border-gray-900 rounded w-full md:w-1/2">
-                        <div className="p-2 text-2xl border-b border-gray-900 bg-gray-800 rounded-t">
+                    <div className="m-2 border border-seagreen-800 rounded w-full md:w-1/2">
+                        <div className="p-2 text-2xl border-b border-seagreen-800 bg-seagreen-800 rounded-t">
                             Activities:
                         </div>
                         <div className="flex justify-center">
@@ -146,8 +146,8 @@ function AdventurePage() {
                         </div>
                     </div>
 
-                    <div className="m-2 border border-gray-900 rounded w-full md:w-1/2">
-                        <div className="p-2 text-2xl border-b border-gray-900 bg-gray-800 rounded-t">
+                    <div className="m-2 border border-seagreen-800 rounded w-full md:w-1/2">
+                        <div className="p-2 text-2xl border-b border-seagreen-800 bg-seagreen-800 rounded-t">
                             Visited locations:
                         </div>
                         <ul className="grid md:grid-cols-2">
@@ -155,8 +155,8 @@ function AdventurePage() {
                         </ul>
                     </div>
 
-                    <div className="m-2 border border-gray-900 rounded w-full md:w-3/4">
-                        <div className="p-2 text-2xl border-b border-gray-900 bg-gray-800 rounded-t">
+                    <div className="m-2 border border-seagreen-800 rounded w-full md:w-3/4">
+                        <div className="p-2 text-2xl border-b border-seagreen-800 bg-seagreen-800 rounded-t">
                             Favorite Pictures:
                         </div>
                         <ul className="grid md:grid-cols-2">
