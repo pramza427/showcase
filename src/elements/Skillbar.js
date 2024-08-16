@@ -1,27 +1,12 @@
 import { useEffect, useRef } from 'react';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import { skills } from '../data/experience';
 
 gsap.registerPlugin(ScrollTrigger);
 
 const SkillBar = () => {
   const maxProficiency = 3;
-  const skills = [
-    { name: 'JavaScript', proficiency: 2 },
-    { name: 'React', proficiency: 3 },
-    { name: 'Node.js', proficiency: 1 },
-    { name: 'Python', proficiency: 1 },
-    { name: 'HTML', proficiency: 3 },
-    { name: 'CSS', proficiency: 3 },
-    { name: 'Tailwind', proficiency: 3},
-    { name: 'SQL', proficiency: 2},
-    { name: 'C#', proficiency: 2},
-    { name: 'GitHub', proficiency: 3},
-    { name: 'Clojurescript', proficiency: 2},
-    { name: 'C/C++', proficiency: 1}
-
-    // Add more skills as needed
-  ];
 
   const skillContainerRef = useRef(null);
 
