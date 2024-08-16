@@ -63,35 +63,40 @@ function App() {
   return (
     <div className="bg-gray-100 dark:bg-mint-950 text-sm md:text-xl ">
       <main className='App-main text-black dark:text-white flex flex-col'>
-        <nav className='w-full text-sm md:text-2xl text-center bg-mint-800 text-mint-100 sticky top-0 bg-opacity-70 backdrop-blur-[18px]'>
+        <nav className='z-10 w-full text-sm md:text-2xl text-center bg-mint-800 text-mint-100 sticky top-0 bg-opacity-70 backdrop-blur-[18px]'>
           <div className='flex justify-center items-center '>
-            <div className='p-5 font-bold'>Portfolio</div>
+            <div className='px-5 py-3 font-bold'>Portfolio</div>
             <div className='flex-grow' />
             <div className={page === Pages.ABOUT
-              ? "p-5 text-mint-400 border-b-4 border-mint-500 "
-              : "p-5 cursor-pointer hover:text-mint-500"}
+              ? "p-3 text-mint-400 border-b-4 border-mint-500 "
+              : "p-3 cursor-pointer hover:text-mint-500"}
               onClick={() => setPage(Pages.ABOUT)}>
-              About Me
+              <i className='fas fa-user' />
+              <div className='text-base'>About Me</div>
             </div>
             <div className={page === Pages.PROJECTS
-              ? "p-5 text-mint-400 border-b-4 border-mint-500 "
-              : "p-5 cursor-pointer hover:text-mint-500"}
+              ? "p-3 text-mint-400 border-b-4 border-mint-500 "
+              : "p-3 cursor-pointer hover:text-mint-500"}
               onClick={() => setPage(Pages.PROJECTS)}>
-              Projects
+              <i className='fas fa-code' />
+              <div className='text-base'>Projects</div>
             </div>
             <div className={page === Pages.EXPERIENCE
-              ? "p-5 text-mint-400 border-b-4 border-mint-500 "
-              : "p-5 cursor-pointer hover:text-mint-500"}
+              ? "p-3 text-mint-400 border-b-4 border-mint-500 "
+              : "p-3 cursor-pointer hover:text-mint-500"}
               onClick={() => setPage(Pages.EXPERIENCE)}>
-              Experience
+              <i className='fas fa-file-lines' />
+              <div className='text-base'>Experience</div>
             </div>
             <div className={page === Pages.ADVENTURES
-              ? "p-5 text-mint-400 border-b-4 border-mint-500 "
-              : "p-5 cursor-pointer hover:text-mint-500"}
+              ? "p-3 text-mint-400 border-b-4 border-mint-500 "
+              : "p-3 cursor-pointer hover:text-mint-500"}
               onClick={() => setPage(Pages.ADVENTURES)}>
-              Adventures
+              <i className='fas fa-earth-americas' />
+              <div className='text-base'>Adventures</div>
             </div>
-            <div className='p-5 cursor-pointer hover:text-mint-500'
+            <div className='flex-grow' />
+            <div className='mx-5 p-3 cursor-pointer hover:text-mint-500'
               onClick={() => setDisplayMode(!isDark)}>
               {isDark === true ? <i class="fa-solid fa-sun"></i> : <i class="fa-solid fa-moon"></i>}
             </div>
@@ -109,7 +114,6 @@ function App() {
           <div className='px-3'>
             pramza427@gmail.com
           </div>
-
         </footer>
       </main>
     </div>

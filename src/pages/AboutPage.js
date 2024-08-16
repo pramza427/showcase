@@ -1,3 +1,7 @@
+import SkillBar from "../elements/Skillbar";
+import Hobbies from "../elements/Hobbies";
+import FavLocations from "../elements/FavLocations";
+
 function AboutPage() {
 
     return (
@@ -68,142 +72,32 @@ function AboutPage() {
                             </div>
                         </div>
                     </div>
-
-
                 </div>
-
-
-
-
-
-
-
-
             </div>
 
-
-            <div className="grid md:grid-cols-2">
-                <div id="hobbies" className="m-3 border border-mint-200 dark:border-mint-800 bg-mint-100 dark:bg-transparent rounded">
-                    <div className="p-2 border-b border-mint-200 dark:border-mint-800 bg-mint-200 dark:bg-mint-800 text-2xl text-center">
-                        Hobbies
-                    </div>
-                    <div className="grid grid-cols-3 md:grid-cols-2">
-
-                        <div className="m-2 text-center">
-                            <i className="fas fa-2x md:fa-4x fa-walking m-3" />
-                            <div className="">Hiking</div>
-                        </div>
-
-                        <div className="m-2 text-center">
-                            <i className="fas fa-2x md:fa-4x fa-hiking m-3" />
-                            <div className="">Backpacking</div>
-                        </div>
-
-                        <div className="m-2 text-center">
-                            <i className="fas fa-2x md:fa-4x fa-campground m-3" />
-                            <div className="">Camping</div>
-                        </div>
-
-                        <div className="m-2 text-center">
-                            <i className="fas fa-2x md:fa-4x fa-hill-rockslide m-3" />
-                            <div className="">Climbing</div>
-                        </div>
-
-                        <div className="m-2 text-center">
-                            <i className="fas fa-2x md:fa-4x fa-biking m-3" />
-                            <div className="">Biking</div>
-                        </div>
-
-                        <div className="m-2 text-center">
-                            <i className="fas fa-2x md:fa-4x fa-fish m-3" />
-                            <div className="">Fishing</div>
-                        </div>
-
-                        <div className="m-2 text-center">
-                            <i className="fas fa-2x md:fa-4x fa-person-snowboarding m-3" />
-                            <div className="">Snowboarding</div>
-                        </div>
-
-                        <div className="m-2 text-center">
-                            <i className="fas fa-2x md:fa-4x fa-pen-ruler m-3" />
-                            <div className="">Sewing</div>
-                        </div>
-
-                        <div className="m-2 text-center">
-                            <i className="fas fa-2x md:fa-4x fa-hammer m-3" />
-                            <div className="">Woodworking</div>
-                        </div>
-
-                        <div className="m-2 text-center">
-                            <i className="fas fa-2x md:fa-4x fa-cake m-3" />
-                            <div className="">Baking</div>
-                        </div>
-
-                        <div className="m-2 text-center">
-                            <i className="fas fa-2x md:fa-4x fa-code m-3" />
-                            <div className="">Coding</div>
-                        </div>
-                    </div>
-
-                </div>
-
-                <div id="favLocs" className="m-3 border border-mint-200 dark:border-mint-800 bg-mint-100 dark:bg-transparent rounded">
-                    <div className="p-2 border-b border-mint-200 dark:border-mint-800 bg-mint-200 dark:bg-mint-800 text-2xl text-center">
-                        Favorite Destinations
-                    </div>
-                    <div className="grid grid-cols-3 md:grid-cols-2 h-full">
-                        <div className="text-center">
-                            <i className="fas fa-2x md:fa-4x fa-walking m-3" />
-                            <div>Black Canyon, CO</div>
-                            <div>Great Sand Dunes National Park, CO</div>
-                            <div>Mammoth Cave, KY</div>
-                            <div>Redwood National Park, CA</div>
-                            <div>Yosemite National Park, CA</div>
-                            <div>Petrified Foreset National Park, AZ</div>
-                        </div>
-
-                        <div className="text-center">
-                            <i className="fas fa-2x md:fa-4x fa-person-snowboarding m-3" />
-                            <div>Aspen Snowmass, CO</div>
-                            <div>Breckenridge, CO</div>
-                            <div>Copper Mountain, CO</div>
-                            <div>Tamarack Resort, ID</div>
-                            <div>Vail, CO</div>
-                            <div>Wolf Creek, CO</div>
-                        </div>
-
-                        <div className="text-center">
-                            <i className="fas fa-2x md:fa-4x fa-hiking m-3" />
-                            <div>Eagle Rock Loop, AR</div>
-                            <div>Four Pass Loop, CO</div>
-                            <div>Wind River Range, WY</div>
-                        </div>                        
-
-                        <div className="text-center">
-                            <i className="fas fa-2x md:fa-4x fa-hill-rockslide m-3" />
-                            <div>Red River Gorge, KY</div>
-                            <div>Shelf Road, CO</div>
-                            <div>Ten Sleep Canyon, WY</div>
-                            <div></div>
-                        </div>
-                    </div>
-                </div>
-
+            <div id="skillBar">
+                <SkillBar />
             </div>
+
+            <div className="container mx-auto mb-10">
+                <div className="grid md:grid-cols-2 gap-4">
+                    <Hobbies />
+                    <FavLocations />
+                </div>
+            </div>
+
 
             <div id="strengths" className="">
 
             </div>
 
-            <div id="favPhotos">
-                <div id="ImageCarosel">
-                    <div className="absolute">left</div>
-                    <div className="absolute">right</div>
 
-                </div>
+
+            <div id="favPhotos">
+
             </div>
 
-        </div>
+        </div >
     );
 }
 

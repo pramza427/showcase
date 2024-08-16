@@ -69,3 +69,12 @@
   transform: rotateY(-70deg) ;
   opacity: 0
 }
+
+@keyframes animate-skill-progress {
+  from {
+    width: 0%;
+  }
+  to {
+    width: 100%;
+  }
+}

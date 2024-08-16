@@ -130,11 +130,11 @@ function AdventurePage() {
         });
 
         return (
-            <div className="flex flex-col 2xl:w-1/2 text-center 2xl:h-80vh">
+            <div className="z-0 flex flex-col 2xl:w-1/2 text-center 2xl:h-80vh">
                 <div className="text-4xl m-5">{currentState}</div>
                 <div className="flex flex-col items-center" >
-                    <div className="m-2 border border-mint-800 rounded w-full md:w-1/2">
-                        <div className="p-2 text-2xl border-b border-mint-800 bg-mint-800 rounded-t">
+                    <div className="m-2 border border-mint-200 dark:border-mint-800 rounded w-full md:w-1/2 shadow-md">
+                        <div className="p-2 text-2xl border-b border-mint-200 bg-mint-200 dark:border-mint-800 dark:bg-mint-800 rounded-t">
                             Activities:
                         </div>
                         <div className="flex justify-center">
@@ -143,11 +143,12 @@ function AdventurePage() {
                             <i className={"fas fa-2x md:fa-4x fa-hiking m-3" + iconColors[currentStateInfo.backpacking]}></i>
                             <i className={"fas fa-2x md:fa-4x fa-biking m-3" + iconColors[currentStateInfo.biking]}></i>
                             <i className={"fas fa-2x md:fa-4x fa-snowboarding m-3 mt-4" + iconColors[currentStateInfo.snowboarding]}></i>
+                            <i className={"fas fa-2x md:fa-4x fa-hill-rockslide m-3 mt-4" + iconColors[currentStateInfo.climbing]}></i>
                         </div>
                     </div>
 
-                    <div className="m-2 border border-mint-800 rounded w-full md:w-1/2">
-                        <div className="p-2 text-2xl border-b border-mint-800 bg-mint-800 rounded-t">
+                    <div className="m-2 border border-mint-200 dark:border-mint-800 rounded w-full md:w-1/2 shadow-md">
+                        <div className="p-2 text-2xl border-b border-mint-200 bg-mint-200 dark:border-mint-800 dark:bg-mint-800 rounded-t">
                             Visited locations:
                         </div>
                         <ul className="grid md:grid-cols-2">
@@ -155,8 +156,8 @@ function AdventurePage() {
                         </ul>
                     </div>
 
-                    <div className="m-2 border border-mint-800 rounded w-full md:w-3/4">
-                        <div className="p-2 text-2xl border-b border-mint-800 bg-mint-800 rounded-t">
+                    <div className="m-2 mb-10 border border-mint-200 dark:border-mint-800 rounded w-full md:w-3/4 shadow-md">
+                        <div className="p-2 text-2xl border-b border-mint-200 bg-mint-200 dark:border-mint-800 dark:bg-mint-800 rounded-t">
                             Favorite Pictures:
                         </div>
                         <ul className="grid md:grid-cols-2">

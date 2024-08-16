@@ -61,8 +61,8 @@ export const experience = [
         company: "",
         using: ["Woodworking", "Electrical", "Powertools"],
         location: "Chicago, IL",
-        date: "January 2021 - Present",
-        summary: "Occasionally I work with my father on general contracting work and have picked up a wide range of skills thoughout the years.",
+        date: "January 2015 - Present",
+        summary: "Occasionally I assist with my father on general contracting work and have picked up a wide range of skills thoughout the years.",
         bulletpoints: []
     }
 
