@@ -65,7 +65,7 @@ function App() {
       <main className='App-main text-black dark:text-white flex flex-col'>
         <nav className='z-10 w-full text-sm md:text-2xl text-center bg-mint-800 text-mint-100 sticky top-0 bg-opacity-70 backdrop-blur-[18px]'>
           <div className='flex justify-center items-center '>
-            <div className='px-5 py-3 font-bold'>Portfolio</div>
+            <div className='px-5 py-3 font-bold hidden md:block'>Portfolio</div>
             <div className='flex-grow' />
             <div className={page === Pages.ABOUT
               ? "p-3 text-mint-400 border-b-4 border-mint-500 "
