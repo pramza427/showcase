@@ -6,8 +6,6 @@ name: Node.js CI
 on:
   push:
     branches: [ "master" ]
-  pull_request:
-    branches: [ "master" ]
 
 permissions:
   contents: read
@@ -36,11 +34,11 @@ jobs:
       with:
         static_site_generator: next
     - run: npm ci
-    - run: npm run build --if-present
-    - name: upload artifacts
+    - run: npm run build
+    - name: Upload artifacts
       uses: actions/upload-pages-artifact@v3
       with: 
-        path: "./out"
+        path: ./out
 
    # Deployment job
   deploy:
