@@ -5,7 +5,7 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        seagreen: {
+        mint: {
           100: '#D8F3DC',
           200: '#B7E4C7',
           300: '#95D5B2',

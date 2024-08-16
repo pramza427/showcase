@@ -10,13 +10,13 @@ function ExperiencePage() {
             )
         })
         return (
-            <div key={i} className="text-base md:text-xl rounded border border-seagreen-800 bg-seagreen-900 mt-10 p-5">
+            <div key={i} className="text-base md:text-xl rounded border border-mint-800 bg-mint-900 mt-10 p-5">
                 <div className="flex">
                     <div className="text-lg md:text-3xl">{e.position}</div>
                     <div className="flex-grow"></div>
                     <div className="text-sm md:text-lg">{e.date}</div>
                 </div>
-                <div className="flex border-b border-seagreen-800 mb-4 pb-2 text-gray-300">
+                <div className="flex border-b border-mint-800 mb-4 pb-2 text-gray-300">
                     <div className="text-md ">{e.company}</div>
                     <div className="flex-grow" />
                     <div className="text-sm md:text-lg">{e.location}</div>
