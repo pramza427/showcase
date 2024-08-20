@@ -98,7 +98,7 @@ function App() {
             <div className='flex-grow' />
             <div className='mx-5 p-3 cursor-pointer hover:text-mint-500'
               onClick={() => setDisplayMode(!isDark)}>
-              {isDark === true ? <i class="fa-solid fa-sun"></i> : <i class="fa-solid fa-moon"></i>}
+              {isDark === true ? <i className="fa-solid fa-sun"></i> : <i className="fa-solid fa-moon"></i>}
             </div>
           </div>
         </nav>

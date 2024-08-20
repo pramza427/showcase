@@ -1,6 +1,8 @@
 import SkillBar from "../elements/Skillbar";
 import Hobbies from "../elements/Hobbies";
 import FavLocations from "../elements/FavLocations";
+import PictureCarousel from "../elements/PictureCarousel";
+import { favoritePictures } from "../data/about_me";
 
 function AboutPage() {
 
@@ -15,17 +17,17 @@ function AboutPage() {
                 <div className="flex flex-col lg:flex-row items-center">
                     <div className="inline-block">
                         <div className="flex items-center justify-center rounded-full bg-mint-700 min-w-[320px] h-[320px] md:min-w-[420px] md:h-[420px] xl:min-w-[520px] xl:h-[520px]">
-                            <img alt="Me" className="rounded-full min-w-[300px] h-[300px] md:min-w-[400px] md:h-[400px] xl:min-w-[500px] xl:h-[500px]" src="imgs/me.jpg" />
+                            <img alt="Me" className="rounded-full min-w-[300px] h-[300px] md:min-w-[400px] md:h-[400px] xl:min-w-[500px] xl:h-[500px]" src="imgs/Me.jpg" />
                         </div>
                         <div className="mt-3 flex justify-evenly text-mint-800 dark:text-mint-100">
                             <a href="https://www.linkedin.com/in/piotrramza/">
-                                <i class="fa-brands fa-3x fa-linkedin hover:text-mint-600"></i>
+                                <i className="fa-brands fa-3x fa-linkedin hover:text-mint-600"></i>
                             </a>
                             <a href="https://github.com/pramza427">
-                                <i class="fa-brands fa-3x fa-github  hover:text-mint-600"></i>
+                                <i className="fa-brands fa-3x fa-github  hover:text-mint-600"></i>
                             </a>
                             <a href="https://www.instagram.com/p_ramza/">
-                                <i class="fa-brands fa-3x fa-instagram  hover:text-mint-600"></i>
+                                <i className="fa-brands fa-3x fa-instagram  hover:text-mint-600"></i>
                             </a>
                         </div>
                     </div>
@@ -80,7 +82,7 @@ function AboutPage() {
             </div>
 
             <div className="container mx-auto mb-10">
-                <div className="grid md:grid-cols-2 gap-4">
+                <div className="grid md:grid-cols-2 gap-20">
                     <Hobbies />
                     <FavLocations />
                 </div>
@@ -92,10 +94,11 @@ function AboutPage() {
             </div>
 
 
-
-            <div id="favPhotos">
-
+            <div className="">
+                <div className="m-3 text-2xl text-center font-bold">Favorite Pictures</div>
+                <PictureCarousel imgObj={favoritePictures} />
             </div>
+
 
         </div >
     );

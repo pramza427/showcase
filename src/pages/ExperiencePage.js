@@ -33,7 +33,7 @@ function ExperiencePage() {
 
     return (
         <div className="container mx-auto flex flex-col items-center">
-            <div className="p-2 2xl:w-1/2">
+            <div className="p-2 ">
                 {experiencesBlocks}
             </div>
         </div>

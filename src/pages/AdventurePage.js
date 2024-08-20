@@ -44,28 +44,28 @@ function AdventurePage() {
                 {a.a[DIRECTIONS.LEFT] != null
                     ? <button className="absolute left-10 top-1/2"
                         onClick={() => setNextLoc(a.a[DIRECTIONS.LEFT], DIRECTIONS.LEFT)}>
-                        <i class="fa-solid fa-4x fa-chevron-left"></i>
+                        <i className="fa-solid fa-4x fa-chevron-left"></i>
                     </button>
                     : <div />}
 
                 {a.a[DIRECTIONS.RIGHT] != null
                     ? <button className="absolute right-10 top-1/2"
                         onClick={() => setNextLoc(a.a[DIRECTIONS.RIGHT], DIRECTIONS.RIGHT)}>
-                        <i class="fa-solid fa-4x fa-chevron-right"></i>
+                        <i className="fa-solid fa-4x fa-chevron-right"></i>
 
                     </button> : <div />}
 
                 {a.a[DIRECTIONS.UP] != null
                     ? <button className="absolute top-10 right-1/2"
                         onClick={() => setNextLoc(a.a[DIRECTIONS.UP], DIRECTIONS.UP)}>
-                        <i class="fa-solid fa-4x fa-chevron-up"></i>
+                        <i className="fa-solid fa-4x fa-chevron-up"></i>
                     </button>
                     : <div />}
 
                 {a.a[DIRECTIONS.DOWN] != null
                     ? <button className="absolute bottom-10 right-1/2"
                         onClick={() => setNextLoc(a.a[DIRECTIONS.DOWN], DIRECTIONS.DOWN)}>
-                        <i class="fa-solid fa-4x fa-chevron-down"></i>
+                        <i className="fa-solid fa-4x fa-chevron-down"></i>
                     </button>
                     : <div />}
             </div>

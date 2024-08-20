@@ -1,66 +1,48 @@
 function Hobbies() {
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('in-view');
+            } else {
+                // Optional: remove class when element goes out of view
+                entry.target.classList.remove('in-view');
+            }
+        });
+    }, { threshold: 0.1 }); // Adjust threshold as needed
+
+    document.querySelectorAll('.hobby-item').forEach(item => {
+        observer.observe(item);
+    });
+
+    const hobbies = [
+        { name: "Hiking", iconClass: "fa-walking" },
+        { name: "Backpacking", iconClass: "fa-hiking" },
+        { name: "Camping", iconClass: "fa-campground" },
+        { name: "Climbing", iconClass: "fa-hill-rockslide" },
+        { name: "Biking", iconClass: "fa-biking" },
+        { name: "Fishing", iconClass: "fa-fish" },
+        { name: "Snowboarding", iconClass: "fa-person-snowboarding" },
+        { name: "Sewing", iconClass: "fa-pen-ruler" },
+        { name: "Woodworking", iconClass: "fa-hammer" },
+        { name: "Baking", iconClass: "fa-cake" },
+        { name: "Coding", iconClass: "fa-code" },
+        { name: "Photography", iconClass: "fa-camera" }
+    ]
 
     return (
-        <div id="hobbies" className="border border-mint-200 dark:border-mint-800 bg-mint-100 dark:bg-transparent rounded">
-            <div className="p-2 border-b border-mint-200 dark:border-mint-800 bg-mint-200 dark:bg-mint-800 text-2xl text-center">
+        <div id="hobbies" className="">
+            <div className="m-3 text-2xl text-center font-bold">
                 Hobbies
             </div>
-            <div className="grid grid-cols-3 md:grid-cols-2">
-
-                <div className="m-2 text-center">
-                    <i className="fas fa-2x md:fa-4x fa-walking m-3" />
-                    <div className="">Hiking</div>
-                </div>
-
-                <div className="m-2 text-center">
-                    <i className="fas fa-2x md:fa-4x fa-hiking m-3" />
-                    <div className="">Backpacking</div>
-                </div>
-
-                <div className="m-2 text-center">
-                    <i className="fas fa-2x md:fa-4x fa-campground m-3" />
-                    <div className="">Camping</div>
-                </div>
-
-                <div className="m-2 text-center">
-                    <i className="fas fa-2x md:fa-4x fa-hill-rockslide m-3" />
-                    <div className="">Climbing</div>
-                </div>
-
-                <div className="m-2 text-center">
-                    <i className="fas fa-2x md:fa-4x fa-biking m-3" />
-                    <div className="">Biking</div>
-                </div>
-
-                <div className="m-2 text-center">
-                    <i className="fas fa-2x md:fa-4x fa-fish m-3" />
-                    <div className="">Fishing</div>
-                </div>
-
-                <div className="m-2 text-center">
-                    <i className="fas fa-2x md:fa-4x fa-person-snowboarding m-3" />
-                    <div className="">Snowboarding</div>
-                </div>
-
-                <div className="m-2 text-center">
-                    <i className="fas fa-2x md:fa-4x fa-pen-ruler m-3" />
-                    <div className="">Sewing</div>
-                </div>
-
-                <div className="m-2 text-center">
-                    <i className="fas fa-2x md:fa-4x fa-hammer m-3" />
-                    <div className="">Woodworking</div>
-                </div>
-
-                <div className="m-2 text-center">
-                    <i className="fas fa-2x md:fa-4x fa-cake m-3" />
-                    <div className="">Baking</div>
-                </div>
-
-                <div className="m-2 text-center">
-                    <i className="fas fa-2x md:fa-4x fa-code m-3" />
-                    <div className="">Coding</div>
-                </div>
+            <div className="grid grid-cols-2 md:grid-cols-3 gap-5">
+                {hobbies.map((h, idx) => {
+                    return (
+                        <div className="p-2 text-center bg-mint-100 dark:bg-mint-800 rounded shadow-md dark:shadow-lg dark:shadow-green-950">
+                            <i className={"fas fa-2x md:fa-4x m-3 text-mint-800 dark:text-mint-300 "+ h.iconClass} />
+                            <div className="font-semibold">{h.name}</div>
+                        </div>
+                    );
+                })}
             </div>
 
         </div>
