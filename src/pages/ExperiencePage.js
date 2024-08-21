@@ -10,7 +10,7 @@ function ExperiencePage() {
             )
         })
         return (
-            <div key={i} className="text-base md:text-xl mt-10 p-5 rounded border border-mint-100 bg-mint-100 dark:border-mint-900 dark:bg-mint-900 shadow-md dark:shadow-lg dark:shadow-black">
+            <div key={i} className="text-base md:text-xl my-10 p-5 rounded border border-mint-100 bg-mint-100 dark:border-mint-900 dark:bg-mint-900 shadow-md dark:shadow-lg dark:shadow-black">
                 <div className="flex items-baseline mb-2">
                     <div className="text-lg md:text-3xl">{e.position}</div>
                     {e.company !== "" ? <div className="mx-3 text-lg md:text-3xl">|</div> : <div/>}

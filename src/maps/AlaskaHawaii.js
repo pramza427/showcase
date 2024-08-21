@@ -19,7 +19,7 @@ function AlaskaHawaii(clickFunc) {
                 });
                 // Change fill color for visited states
                 if (stateInfo[stateId].visited) {
-                    path.setAttribute("fill", "green");
+                    path.setAttribute("fill", "#2D6A4F");
                 }
             });
         }
@@ -33,7 +33,7 @@ function AlaskaHawaii(clickFunc) {
             width="100%" height="100%"
             viewBox="0 0 500 900">
             <path id="Alaska"
-                fill="gray" stroke="black" stroke-width="1"
+                 fill="currentColor" stroke="black" stroke-width="1"
                 d="M 240.00,50.00
            C 240.00,50.00 260.00,60.00 260.00,60.00
              260.00,60.00 290.00,70.00 290.00,70.00
@@ -98,7 +98,7 @@ function AlaskaHawaii(clickFunc) {
              210.00,60.00 230.00,60.00 230.00,60.00
              230.00,60.00 240.00,50.00 240.00,50.00 Z" />
             <path id="Hawaii"
-                fill="gray" stroke="black" stroke-width="1"
+                 fill="currentColor" stroke="black" stroke-width="1"
                 d="M 162.88,672.25
            C 162.88,672.25 160.00,680.00 160.00,680.00
              160.00,680.00 167.25,677.50 167.25,677.50

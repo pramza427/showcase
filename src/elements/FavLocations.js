@@ -34,7 +34,7 @@ function FavLocations() {
                 </div>
 
                 <div className="p-2 text-center bg-mint-100 dark:bg-mint-800 rounded shadow-md dark:shadow-lg dark:shadow-green-950">
-                    <i className="fas fa-2x md:fa-4x fa-hill-rockslide m-3 text-mint-800 dark:text-mint-300" />
+                    <i className="fas fa-2x md:fa-4x h-[1em] w-[1.2em] fa-climber m-3 text-mint-800 dark:text-mint-300" />
                     <div>Red River Gorge, KY</div>
                     <div>Shelf Road, CO</div>
                     <div>Ten Sleep Canyon, WY</div>

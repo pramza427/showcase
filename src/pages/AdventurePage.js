@@ -142,7 +142,7 @@ function AdventurePage() {
                             <i className={"fas fa-2x md:fa-4x fa-hiking m-3" + iconColors[currentStateInfo.backpacking]}></i>
                             <i className={"fas fa-2x md:fa-4x fa-biking m-3" + iconColors[currentStateInfo.biking]}></i>
                             <i className={"fas fa-2x md:fa-4x fa-snowboarding m-3 mt-4" + iconColors[currentStateInfo.snowboarding]}></i>
-                            <i className={"fas fa-2x md:fa-4x fa-hill-rockslide m-3 mt-4" + iconColors[currentStateInfo.climbing]}></i>
+                            <i className={"fas fa-2x md:fa-4x fa-mountain m-3 mb-1 mt-4" + iconColors[currentStateInfo.climbing]}></i>
                         </div>
                     </div>
 
@@ -180,7 +180,7 @@ function AdventurePage() {
             <div className="w-full 2xl:w-1/2 text-center">
                 <div className="my-5 text-3xl font-bold">{locations[currentIndex].name}</div>
                 <div className="mb-5 carouselContainer">
-                    <div className="carousel">
+                    <div className="carousel text-gray-400 dark:text-gray-500">
                         {locations.map((loc, index) => (
                             <div className={getLocationClass(index)} >
                                 {loc.elem(setCurrentState)}

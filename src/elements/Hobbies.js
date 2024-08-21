@@ -18,7 +18,7 @@ function Hobbies() {
         { name: "Hiking", iconClass: "fa-walking" },
         { name: "Backpacking", iconClass: "fa-hiking" },
         { name: "Camping", iconClass: "fa-campground" },
-        { name: "Climbing", iconClass: "fa-hill-rockslide" },
+        { name: "Climbing", iconClass: "h-[1em] w-[1.2em] fa-climber" },
         { name: "Biking", iconClass: "fa-biking" },
         { name: "Fishing", iconClass: "fa-fish" },
         { name: "Snowboarding", iconClass: "fa-person-snowboarding" },

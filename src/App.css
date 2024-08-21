@@ -70,6 +70,14 @@
   opacity: 0
 }
 
+.fa-climber::before {
+  content: url("../public/svgs/ClimberIcon.svg");
+}
+
+.dark .fa-climber::before {
+  content: url("../public/svgs/ClimberIconDark.svg");
+}
+
 @keyframes animate-skill-progress {
   from {
     width: 0%;
