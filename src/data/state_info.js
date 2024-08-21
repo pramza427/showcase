@@ -97,7 +97,7 @@ export const stateInfo = {
     },
     "Florida": {
         visited: true,
-        favoriteLoc: ["Dinsney World"],
+        favoriteLoc: ["Disney World"],
         hiking: 0,
         backpacking: 0,
         camping: 0,
