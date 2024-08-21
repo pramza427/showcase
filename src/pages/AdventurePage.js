@@ -1,4 +1,5 @@
 import { stateInfo } from "../data/state_info";
+import PictureCarousel from "../elements/PictureCarousel";
 import AlaskaHawaii from "../maps/AlaskaHawaii";
 import Usa from "../maps/Usa";
 import React, { useState } from "react";
@@ -108,7 +109,7 @@ function AdventurePage() {
             return (<div className="text-center">Click on a state to get more information</div>);
         }
 
-        const iconColors = [" text-gray-700 ", " text-red-500 ", " text-yellow-500 ", " text-green-500 "];
+        const iconColors = [" text-mint-200 dark:text-mint-700 ", " text-red-500 ", " text-yellow-500 ", " text-green-500 "];
 
         const currentStateInfo = stateInfo[currentState];
 
@@ -125,19 +126,17 @@ function AdventurePage() {
             return (<li key={idx} className="p-2 text-lg">{loc}</li>);
         });
 
-        const favoritePictures = currentStateInfo.pictures.map((pic, idx) => {
-            return (<img key={idx} alt="location" className="" src={pic} />);
-        });
+
 
         return (
-            <div className="z-0 flex flex-col 2xl:w-1/2 text-center 2xl:h-80vh">
-                <div className="text-4xl m-5">{currentState}</div>
+            <div className="z-0 mb-10 flex flex-col 2xl:w-1/2 text-center 2xl:h-80vh">
+                <div className="text-4xl m-5 font-bold">{currentState}</div>
                 <div className="flex flex-col items-center" >
-                    <div className="m-2 border border-mint-200 dark:border-mint-800 rounded w-full md:w-1/2 shadow-md">
-                        <div className="p-2 text-2xl border-b border-mint-200 bg-mint-200 dark:border-mint-800 dark:bg-mint-800 rounded-t">
+                    <div className="w-full md:w-1/2 m-3 text-2xl text-center font-semibold">
+                        <div className="mb-2">
                             Activities:
                         </div>
-                        <div className="flex justify-center">
+                        <div className="p-4 bg-mint-100 dark:bg-mint-800 rounded-lg shadow-md dark:shadow-lg dark:shadow-green-950">
                             <i className={"fas fa-2x md:fa-4x fa-walking m-3" + iconColors[currentStateInfo.hiking]}></i>
                             <i className={"fas fa-2x md:fa-4x fa-campground m-3" + iconColors[currentStateInfo.camping]}></i>
                             <i className={"fas fa-2x md:fa-4x fa-hiking m-3" + iconColors[currentStateInfo.backpacking]}></i>
@@ -147,23 +146,30 @@ function AdventurePage() {
                         </div>
                     </div>
 
-                    <div className="m-2 border border-mint-200 dark:border-mint-800 rounded w-full md:w-1/2 shadow-md">
-                        <div className="p-2 text-2xl border-b border-mint-200 bg-mint-200 dark:border-mint-800 dark:bg-mint-800 rounded-t">
-                            Visited locations:
-                        </div>
-                        <ul className="grid md:grid-cols-2">
-                            {favoriteSpots}
-                        </ul>
-                    </div>
+                    {
+                        currentStateInfo.favoriteLoc.length !== 0
+                            ? <div className="w-full md:w-1/2 m-3 text-2xl text-center font-semibold">
+                                <div className="mb-2">
+                                    Visited locations:
+                                </div>
+                                <ul className="grid md:grid-cols-2 p-4 bg-mint-100 dark:bg-mint-800 rounded-lg shadow-md dark:shadow-lg dark:shadow-green-950">
+                                    {favoriteSpots}
+                                </ul>
+                            </div>
+                            : <div />
+                    }
 
-                    <div className="m-2 mb-10 border border-mint-200 dark:border-mint-800 rounded w-full md:w-3/4 shadow-md">
-                        <div className="p-2 text-2xl border-b border-mint-200 bg-mint-200 dark:border-mint-800 dark:bg-mint-800 rounded-t">
-                            Favorite Pictures:
-                        </div>
-                        <ul className="grid md:grid-cols-2">
-                            {favoritePictures}
-                        </ul>
-                    </div>
+                    {
+                        currentStateInfo.pictures.length !== 0
+                            ? <div className="w-full m-3 text-2xl text-center font-semibold">
+                                <div className="mb-2">
+                                    Favorite Pictures:
+                                </div>
+                                <PictureCarousel imgObj={currentStateInfo.pictures} />
+                            </div>
+                            : <div />
+                    }
+
                 </div>
             </div>
         )
@@ -172,8 +178,8 @@ function AdventurePage() {
     return (
         <div className="flex flex-col 2xl:flex-row">
             <div className="w-full 2xl:w-1/2 text-center">
-                <div className="text-3xl">{locations[currentIndex].name}</div>
-                <div className="carouselContainer">
+                <div className="my-5 text-3xl font-bold">{locations[currentIndex].name}</div>
+                <div className="mb-5 carouselContainer">
                     <div className="carousel">
                         {locations.map((loc, index) => (
                             <div className={getLocationClass(index)} >

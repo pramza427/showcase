@@ -8,13 +8,13 @@ function AboutPage() {
 
     return (
         <div>
-            <div className="p-5 flex flex-col bg-mint-100 dark:bg-mint-900">
-                <div className="m-4 mt-0">
+            <div className="py-10 flex flex-col bg-mint-100 dark:bg-mint-900">
+                <div className="mb-4 container mx-auto text-center lg:text-left">
                     <div className="text-6xl roboto-regular text-mint-900 dark:text-white">Piotr Ramza</div>
                     <div className="text-3xl text-mint-800 dark:text-gray-300">Software Engineer</div>
                     <div className="text-2xl text-mint-600 dark:text-gray-500">Photographer and Maker</div>
                 </div>
-                <div className="flex flex-col lg:flex-row items-center">
+                <div className="flex flex-col container mx-auto lg:flex-row items-center">
                     <div className="inline-block">
                         <div className="flex items-center justify-center rounded-full bg-mint-700 min-w-[320px] h-[320px] md:min-w-[420px] md:h-[420px] xl:min-w-[520px] xl:h-[520px]">
                             <img alt="Me" className="rounded-full min-w-[300px] h-[300px] md:min-w-[400px] md:h-[400px] xl:min-w-[500px] xl:h-[500px]" src="imgs/Me.jpg" />
@@ -32,12 +32,12 @@ function AboutPage() {
                         </div>
                     </div>
 
-                    <div className="p-5 flex flex-col items-center text-2xl">
-                        <div className="pb-10">
+                    <div className="p-5 flex flex-col items-center">
+                        <div className="pb-5 md:pb-10 text-base md:text-2xl">
                             I’m a software developer with two years professional experience and a passion for making, whether that be physical or virtual. I enjoy tackling problems with creative solutions through exploration of new technologies. I have worked on a multitude of projects ranging in scale from individual to working on a team with dozens of people. I love sitting down, coding, and making something new.
                         </div>
                         <div id="favorites" className="w-full m-3 rounded">
-                            <div className="grid grid-cols-2 md:grid-cols-3 gap-y-10">
+                            <div className="grid grid-cols-2 md:grid-cols-3 gap-y-5 md:gap-y-10">
                                 <div className="">
                                     <i className="fas fa-lg md:fa-3x fa-palette m-3 text-mint-600" />
                                     <div className="font-bold text-mint-900 dark:text-mint-100">Favorite Color</div>
@@ -82,7 +82,7 @@ function AboutPage() {
             </div>
 
             <div className="container mx-auto mb-10">
-                <div className="grid md:grid-cols-2 gap-20">
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-20">
                     <Hobbies />
                     <FavLocations />
                 </div>

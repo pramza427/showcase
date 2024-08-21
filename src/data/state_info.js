@@ -63,7 +63,15 @@ export const stateInfo = {
         biking: 2,
         snowboarding: 3,
         climbing: 3,
-        pictures: []
+        pictures: [
+            {url: "imgs/CO/BlackCanyonAway.jpg", location: "Black Canyon NP"},
+            {url: "imgs/CO/BlackCanyonDeep.jpg", location: "Black Canyon NP"},
+            {url: "imgs/CO/Field.jpg", location: "Four Pass Loop"},
+            {url: "imgs/CO/FlowerField.jpg", location: "Four Pass Loop"},
+            {url: "imgs/CO/FourPass1.jpg", location: "Four Pass Loop"},
+            {url: "imgs/CO/SandDunesPhoto.jpg", location: "Sand Dunes NP"},
+            {url: "imgs/CO/SandDunesReach.jpg", location: "Sand Dunes NP"},
+        ]
     },
     "Connecticut": {
         visited: false,
@@ -140,7 +148,13 @@ export const stateInfo = {
         biking: 3,
         snowboarding: 0,
         climbing: 0,
-        pictures: []
+        pictures: [
+            {url: "imgs/IL/Film1.jpg", location: "Home"},
+            {url: "imgs/IL/FlowerBowls.jpg", location: "Chicago Botanic Gardens"},
+            {url: "imgs/IL/FlowerFall.jpg", location: "Chicago Botanic Gardens"},
+            {url: "imgs/IL/Lightning.jpg", location: "Home"},
+            {url: "imgs/IL/NightLights.jpg", location: "Downtown Chicago"},
+        ]
     },
     "Indiana": {
         visited: true,
@@ -349,7 +363,9 @@ export const stateInfo = {
         biking: 0,
         snowboarding: 0,
         climbing: 0,
-        pictures: []
+        pictures: [
+            {url: "imgs/NY/Building.jpg", location: "New York City"},
+        ]
     },
     "North Carolina": {
         visited: true,
@@ -481,7 +497,9 @@ export const stateInfo = {
         biking: 0,
         snowboarding: 0,
         climbing: 0,
-        pictures: []
+        pictures: [
+            {url: "imgs/UT/GrandCanyon.jpg", location: "Grand Canyon"},
+        ]
     },
     "Vermont": {
         visited: false,
@@ -536,7 +554,9 @@ export const stateInfo = {
         biking: 0,
         snowboarding: 3,
         climbing: 1,
-        pictures: []
+        pictures: [
+            {url: "imgs/WI/SnowboardFall.jpg", location: "Alpine Valley"},
+        ]
     },
     "Wyoming": {
         visited: true,
