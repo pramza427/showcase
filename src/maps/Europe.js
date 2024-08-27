@@ -15,7 +15,7 @@ function Europe(clickFunc) {
       paths.forEach((path) => {
         const stateId = path.id;
         path.addEventListener("click", () => {
-          clickFunc(europeInfo[stateId]);
+          clickFunc(stateId, europeInfo[stateId]);
         });
         // Change fill color for visited states
         console.log(stateId)

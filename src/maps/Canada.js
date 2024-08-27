@@ -15,7 +15,7 @@ function Canada(clickFunc) {
             paths.forEach((path) => {
                 const stateId = path.id;
                 path.addEventListener("click", () => {
-                    clickFunc(canadaInfo[stateId]);
+                    clickFunc(stateId, canadaInfo[stateId]);
                 });
                 // Change fill color for visited states
                 if (canadaInfo[stateId].visited) {
