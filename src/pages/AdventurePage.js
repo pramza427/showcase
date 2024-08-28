@@ -113,10 +113,10 @@ function AdventurePage() {
                 directionClass = "";
         }
         if (index === currentIndex) {
-            arivingClass = "ariving" + "-" + directionClass;
+            arivingClass = "ariving-" + directionClass;
         }
         else if (index === lastIndex) {
-            arivingClass = "departing" + "-" + directionClass;
+            arivingClass = "departing-" + directionClass;
         }
         else {
             arivingClass = "hiddenLoc"
